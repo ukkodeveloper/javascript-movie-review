@@ -54,6 +54,7 @@ class App {
   #handleSubmitSearch({ detail }: any) {
     this.movieFetcher = new SearchMovieFetcher(detail.keyword);
     this.children.movieList.cleanMovieList().setListName(`${detail.keyword} ${SEARCH_LIST_NAME_SUFFIX}`);
+    console.log('once');
     this.#renderMovies();
   }
 
